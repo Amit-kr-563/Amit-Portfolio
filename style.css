@@ -609,61 +609,110 @@ letter-spacing: 1px;
   font-size: 1.5rem;
   color: var(--main-color);
 }
-
-
-/* media quary code for project section */
+/* ===== Tablet (max-width: 768px) ===== */
 @media (max-width: 768px) {
   .portfolio_container {
-    grid-template-columns: 1fr;
-    width: 98%;
-    gap: 1.2rem;
+    display: grid;
+    grid-template-columns: 1fr; /* single column layout */
+    width: 95%;
+    gap: 2.5rem;
+    margin: 0 auto;
   }
+
+  .portfolio_box {
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    transition: transform 0.3s ease;
+  }
+
+  .portfolio_box:hover {
+    transform: translateY(-5px);
+  }
+
   .portfolio_box img {
-    height: 180px;
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
   }
+
   .portfolio_layer {
-    padding: 0 1rem;
+    padding: 1rem;
+    text-align: center;
   }
+
   .portfolio_layer h4 {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
   }
+
   .portfolio_layer p {
     font-size: 1rem;
+    line-height: 1.5;
+    color: #444;
   }
+
   .portfolio_layer a {
-    width: 2.5rem;
-    height: 2.5rem;
+    width: 2.7rem;
+    height: 2.7rem;
+    margin-top: 0.8rem;
   }
+
   .portfolio_layer i {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
   }
 }
+
+/* ===== Mobile (max-width: 480px) ===== */
 @media (max-width: 480px) {
   .portfolio_container {
     grid-template-columns: 1fr;
     width: 100%;
-    gap: 0.7rem;
+    gap: 1.5rem;
+    margin: 0 auto;
   }
+
+  .portfolio_box {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.12);
+  }
+
   .portfolio_box img {
-    height: 120px;
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
   }
+
   .portfolio_layer {
-    padding: 0 0.5rem;
+    padding: 0.8rem;
+    text-align: center;
   }
+
   .portfolio_layer h4 {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 0.4rem;
   }
+
   .portfolio_layer p {
-    font-size: 0.85rem;
-  }
-  .portfolio_layer a {
-    width: 2rem;
-    height: 2rem;
-  }
-  .portfolio_layer i {
     font-size: 0.9rem;
+    line-height: 1.4;
+    color: #555;
+  }
+
+  .portfolio_layer a {
+    width: 2.3rem;
+    height: 2.3rem;
+    margin-top: 0.6rem;
+  }
+
+  .portfolio_layer i {
+    font-size: 1rem;
   }
 }
+
 /* -------------Education----------------- */
 
 /* Education Section */
@@ -695,7 +744,7 @@ letter-spacing: 1px;
   display: flex;
   flex-direction: column;
   gap: 30px;
-}
+} 
 
 /* Education Card */
 .edu-card {
